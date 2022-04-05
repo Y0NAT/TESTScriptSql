@@ -1,4 +1,6 @@
-DROP TABLE Armes, Heros, Competences;
+DROP TABLE Armes;
+DROP TABLE Hero;
+DROP TABLE Competences;
 
 CREATE TABLE Armes (
 
@@ -38,9 +40,15 @@ INSERT INTO Armes VALUES ("04",0,"feuille","tranchant",5);
 INSERT INTO Armes VALUES ("05",0,"caillou","contondant",5);
 INSERT INTO Armes VALUES ("06",0,"ciseau","perçant",5);
 
-INSERT INTO competences (ID, Type, Effet) VALUES (1, 'Bonus', 'Couuyyèèère'),(2, 'Bonus', 'la trot magique'),(3, 'Bonus', 'feutoutflamme');
+INSERT INTO Competences (ID, Type, Effet) VALUES (1, 'Bonus', 'Couuyyèèère');
+INSERT INTO Competences (ID, Type, Effet) VALUES (2, 'Bonus', 'la trot magique');
+INSERT INTO Competences (ID, Type, Effet) VALUES (3, 'Bonus', 'feutoutflamme');
 
 ALTER TABLE
     Heros ADD CONSTRAINT PK_Armes_ID PRIMARY KEY Armes(ID);
 ALTER TABLE
     Armes ADD FOREIGN KEY(HerosID) REFERENCES Heros(ID);
+
+SELECT * FROM Armes;
+SELECT * FROM Heros;
+SELECT * FROM Competences;
