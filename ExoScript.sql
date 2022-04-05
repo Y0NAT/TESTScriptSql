@@ -1,0 +1,5 @@
+SELECT * FROM `Heros` ORDER BY Nom ASC
+SELECT * FROM `Heros` WHERE PV = `40`
+
+
+SELECT * FROM `Heros` ORDER BY PV = `40`
